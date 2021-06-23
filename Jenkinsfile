@@ -1,5 +1,8 @@
 pipeline {
     agent { docker { image 'java:8-jdk-alpine ' } }
+	environment {
+	TEST = 'TEST'
+	}
     stages {
         stage('Checkout') {
 			steps {
